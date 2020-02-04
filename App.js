@@ -19,8 +19,6 @@ class App extends Component
     if(i>=0 && i < list.length)
       this.setState({
         index: i + 1
-      },()=>{
-        console.log(list[this.state.index])
       })
     }
   
@@ -30,8 +28,6 @@ class App extends Component
     if(i>0)
       this.setState({
         index: i - 1
-      },()=>{
-        console.log(list[this.state.index])
       })
    }
 
@@ -49,6 +45,7 @@ class App extends Component
           <h1>Click the buttons to see the rest of the list</h1>
           <button id="forward" onClick={this.changeListForward}>forward</button>
           <button id="back" onClick={this.changeListback}>back</button>
+          <p>{list[this.state.index]}</p>
         </div> 
       </Fragment>
     );
